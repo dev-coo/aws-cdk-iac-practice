@@ -1,0 +1,17 @@
+[
+  {
+    "id": 1,
+    "text": "프로젝트 계획 수립하기",
+    "completed": false
+  },
+  {
+    "id": 2,
+    "text": "디자인 시안 검토하기",
+    "completed": true
+  },
+  {
+    "id": 3,
+    "text": "API 문서 작성하기",
+    "completed": false
+  }
+]

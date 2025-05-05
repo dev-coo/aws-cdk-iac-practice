@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>할 일 목록</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <div class="card-header">
+        <h1 class="card-title">할 일 목록</h1>
+      </div>
+      <div class="card-content">
+        <!-- 할 일 추가 폼 -->
+        <form id="todo-form" class="todo-form">
+          <input type="text" id="todo-input" placeholder="할 일을 입력하세요" class="todo-input">
+          <button type="submit" id="add-button" class="button">추가</button>
+        </form>
+
+        <!-- 로딩 표시 -->
+        <p id="loading-message" class="text-center">로딩 중...</p>
+
+        <!-- 할 일 목록 -->
+        <div id="todo-list" class="todo-list"></div>
+
+        <!-- 할 일 없음 메시지 -->
+        <p id="empty-message" class="text-center text-muted hidden">할 일이 없습니다</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 할 일 항목 템플릿 -->
+  <template id="todo-item-template">
+    <div class="todo-item">
+      <div class="todo-item-content">
+        <input type="checkbox" class="todo-checkbox">
+        <span class="todo-text"></span>
+      </div>
+      <div class="todo-item-actions">
+        <button class="button-icon edit-button" title="수정">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M17 3a2.85 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5Z"></path>
+            <path d="m15 5 4 4"></path>
+          </svg>
+        </button>
+        <button class="button-icon delete-button" title="삭제">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 6h18"></path>
+            <path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"></path>
+            <path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </template>
+
+  <!-- 할 일 수정 템플릿 -->
+  <template id="todo-edit-template">
+    <div class="todo-item-edit">
+      <input type="text" class="todo-edit-input">
+      <div class="todo-edit-actions">
+        <button class="button-icon save-button" title="저장">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20 6 9 17l-5-5"></path>
+          </svg>
+        </button>
+        <button class="button-icon cancel-button" title="취소">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M18 6 6 18"></path>
+            <path d="m6 6 12 12"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </template>
+
+  <script src="app.js"></script>
+</body>
+</html>
