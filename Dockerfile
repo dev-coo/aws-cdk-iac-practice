@@ -16,14 +16,8 @@ RUN curl -fsSL https://deb.nodesource.com/setup_16.x | bash - \
     && apt-get install -y nodejs \
     && npm install --location=global aws-cdk
 
-# AWS CLI 설치 (아키텍처에 맞게 수정)
-RUN apt-get update && apt-get install -y \
-    unzip \
-    && curl "https://awscli.amazonaws.com/awscli-exe-linux-aarch64.zip" -o "awscliv2.zip" \
-    && unzip awscliv2.zip \
-    && ./aws/install \
-    && rm -rf awscliv2.zip aws \
-    && rm -rf /var/lib/apt/lists/*
+# AWS CLI 설치
+RUN pip install --no-cache-dir awscli
 
 # Python 패키지 설치
 COPY requirements.txt .
