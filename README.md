@@ -45,3 +45,18 @@ chmod +x run-docker.sh
 ## 참고 자료
 
 - [AWS sample](https://github.com/aws-samples/aws-modern-application-workshop)
+
+0. aws account 연결
+1. iam 만드는게 빠져있음
+2. cdk install 삭제
+3. stack 삭제 부분 추가 , 테스트 폴더도 삭제
+4. 모듈1의 웹에서 목표내용들을 모듈 진행에 맞게 수정
+5. 웹사이트 루트 디렉토리 정의 <라는 부분 문구 수정
+6. txt 파일을 야믈로 변경
+7. cdk bootstrap 은 최초 1회만
+8. 모듈 1에서 mkdir app이 필요없음
+9. docker 명령어는 외부에서 쳐야하므로 cd app 을 하고 진핼 또는 색을 넣어서 표현하는걸로다가
+10. awscli 는 결국 사용사pc에 설치해야함
+11. web 올리는데 10~15, 이미지 만드는데 20분, ecs 20분
+12. 이미지도 만들어 올리기
+
