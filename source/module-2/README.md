@@ -159,7 +159,7 @@ Successfully tagged 111111111111.dkr.ecr.us-east-1.amazonaws.com/todolist/servic
 로컬 환경에서 이미지를 테스트하여 예상대로 작동하는지 테스트해보겠습니다. 아래 명령을 실행하여 컨테이너를 로컬에 배포합니다:
 
 ```sh
-docker run -p 8080:8080 $(aws sts get-caller-identity --query Account --output text).dkr.ecr.$(aws configure get region).amazonaws.com/todolist/service:latest
+docker run -p 8080:8080 $(aws sts get-caller-identity --query Account --output text).dkr.ecr.$(aws configure get region).amazonaws.com/todolist/service:latest -d
 ```
 
 컨테이너가 로컬에서 작동중인걸 확인할 수 있습니다:
@@ -656,7 +656,7 @@ export class CiCdStack extends cdk.Stack {
     const sourceAction = new actions.GitHubSourceAction({
       actionName: "GitHub-Source",
       owner: 'YOUR_GITHUB_USERNAME',           // ← 실제 GitHub 사용자명으로 변경
-      repo: 'todolist-backend',
+      repo: 'cdk-todolist-backend',
       branch: 'main',
       oauthToken: githubToken,
       output: sourceOutput
