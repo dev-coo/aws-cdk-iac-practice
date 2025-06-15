@@ -22,6 +22,11 @@ TodoList 웹사이트는 Amazon CloudFront와 함께 Amazon S3에서 정적 콘�
 
 애플리케이션을 변경하고 배포하는 모든 것을 프로그래밍 방식으로 진행하게 됩니다. AWS CDK를 사용하여 필요한 인프라 구성 요소를 생성하며, AWS CodeCommit, CodeBuild, CodePipeline을 활용한 완전 관리되는 CI/CD 스택도 생성하게 됩니다.
 
+## 원본 출처
+
+- [AWS sample](https://github.com/aws-samples/aws-modern-application-workshop)
+
+
 ## 현대 애플리케이션 워크샵 시작
 
 아래 모듈 0 진행을 눌러 실습을 진행해주세요!
@@ -63,10 +68,6 @@ TodoList 워크샵에서 생성 및 사용한 모든 리소스의 제거를 아�
 
 [모듈 0 진행](./module-0/README.md)
 
-
-## 원본 출처
-
-- [AWS sample](https://github.com/aws-samples/aws-modern-application-workshop)
 
 ## [AWS Developer Center](https://developer.aws)
 
