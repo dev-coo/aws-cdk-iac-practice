@@ -194,7 +194,7 @@ DynamoDB API **BatchWriteItem**을 사용하여 제공된 JSON 파일로 테이�
 
 ```sh
 cd ../
-aws dynamodb batch-write-item --request-items "$(cat ./source/module-3/data/populate-dynamodb.json)"
+aws dynamodb batch-write-item --request-items "$(cat ./source/module-3/data/todolist-dynamodb.json)"
 ```
 
 이제 위의 아이템 확인 명령을 다시 실행하여 테이블을 스캔하면 테이블에 항목이 추가된 걸 볼 수 있습니다:
