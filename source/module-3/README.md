@@ -257,6 +257,4 @@ cdk deploy TodoList-Website
 
 이것으로 모듈 3을 마치겠습니다.
 
-[모듈 4 진행](/module-4)
-
 ## [AWS Developer Center](https://developer.aws)
